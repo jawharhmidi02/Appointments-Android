@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "174110988447",
+    "project_id": "appointments-1127c",
+    "storage_bucket": "appointments-1127c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174110988447:android:1ebc074e3c826ecad3eaaa",
+        "android_client_info": {
+          "package_name": "fr.iutlan.rendezvous"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9ok_qOiOM62HUb3UYt_M4y3wZeZzwTFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

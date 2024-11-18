@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Customize FirebaseUI -->
+    <style name="FirebaseUITheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#3F51B5</item> <!-- Customize as needed -->
+        <item name="colorPrimaryDark">#303F9F</item> <!-- Customize as needed -->
+        <item name="colorAccent">#FF4081</item> <!-- Customize as needed -->
+        <!-- Add more custom styles if needed -->
+    </style>
+</resources>
