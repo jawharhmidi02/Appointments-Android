@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+        <!-- Back Button -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Input for Date -->
+    <EditText
+        android:id="@+id/date_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date (yyyy-mm-dd)"
+        android:inputType="date"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Input for Time -->
+    <EditText
+        android:id="@+id/time_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Time (hh:mm-hh:mm)"
+        android:inputType="text"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Add Availability Button -->
+    <Button
+        android:id="@+id/add_availability_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Availability" />
+
+    <!-- List of Availability -->
+    <ListView
+        android:id="@+id/availability_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

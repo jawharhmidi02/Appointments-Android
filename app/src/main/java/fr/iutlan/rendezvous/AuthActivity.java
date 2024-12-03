@@ -3,6 +3,7 @@ package fr.iutlan.rendezvous;
 import static java.lang.Integer.parseInt;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -161,20 +162,24 @@ public class AuthActivity extends AppCompatActivity {
 
 
     private void fetchUserRole(String userId) {
-        database.collection("User").document(userId).get()
-                .addOnSuccessListener(documentSnapshot -> {
-                    if (documentSnapshot.exists()) {
-                        String role = documentSnapshot.getString("role");
-                        if (role != null) {
-                            startMainApp(role); // Pass the role to the main app
-                        } else {
-                            Toast.makeText(this, "Role not found", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(this, "User document not found", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(e -> Log.e("Firestore", "Error fetching role", e));
+        startMainApp("Test");
+//        database.collection("User").document(userId).get()
+//                .addOnSuccessListener(documentSnapshot -> {
+//                    if (documentSnapshot.exists()) {
+//                        String role = documentSnapshot.getString("role");
+//                        if (role != null) {
+//                            startMainApp(role); // Pass the role to the main app
+//                        } else {
+//                            Toast.makeText(this, "Role not found", Toast.LENGTH_SHORT).show();
+//                        }
+//                    } else {
+//                        Toast.makeText(this, "User document not found", Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .addOnFailureListener(e -> {
+//                    Log.e("Firestore", "Error fetching role", e);
+//                    Toast.makeText(this, "Error Database!", Toast.LENGTH_SHORT).show();
+//                });
     }
 
 
@@ -182,10 +187,16 @@ public class AuthActivity extends AppCompatActivity {
         String welcomeMessage = "Welcome " + (role.equals("doctor") ? "Doctor" : "Patient") + "!";
         Toast.makeText(this, welcomeMessage, Toast.LENGTH_LONG).show();
 
-        // Redirect to MainActivity or another activity
-        // Intent intent = new Intent(AuthActivity.this, MainActivity.class);
-        // startActivity(intent);
-        // finish();
+        Intent intent;
+        if (role.equals("doctor")) {
+            intent = new Intent(AuthActivity.this, DoctorActivity.class);
+        } else {
+            intent = new Intent(AuthActivity.this, DoctorActivity.class);
+
+//            intent = new Intent(AuthActivity.this, PatientActivity.class);
+        }
+        startActivity(intent);
+        finish();
     }
 
 }

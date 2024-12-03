@@ -13,6 +13,7 @@
         android:theme="@style/Theme.RendezVous"
         tools:targetApi="31">
 
+        <!-- Authentication Activity -->
         <activity
             android:name=".AuthActivity"
             android:exported="true">
@@ -21,6 +22,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activity for Searching Doctors -->
+        <activity
+            android:name=".SearchDoctorActivity"
+            android:exported="true">
+            <!-- No intent filter since it's not the main entry point -->
+        </activity>
+
+        <!-- Activity for Doctor Activity -->
+        <activity
+            android:name=".DoctorActivity"
+            android:exported="true">
+            <!-- No intent filter since it's not the main entry point -->
+        </activity>
+
+        <!-- Activity for Patient Activity -->
+        <activity
+            android:name=".PatientActivity"
+            android:exported="true">
+            <!-- No intent filter since it's not the main entry point -->
+        </activity>
+
+        <!-- Activity for Managing Availability -->
+        <activity
+            android:name=".ManageAvailabilityActivity"
+            android:exported="true">
+            <!-- No intent filter since it's not the main entry point -->
+        </activity>
+
     </application>
 
 </manifest>
