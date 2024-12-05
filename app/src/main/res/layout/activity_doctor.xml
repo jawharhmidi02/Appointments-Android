@@ -10,14 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Search Doctors"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/manage_availability_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Manage Availability"
-        android:layout_marginTop="16dp" />
+        android:layout_marginBottom="8dp" />
+
+    <!-- View patient appointments -->
+    <Button
+        android:id="@+id/view_patient_appointments_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Patient Appointments"
+        android:layout_marginBottom="8dp" />
 
     <!-- Logout button -->
     <Button
@@ -27,9 +35,20 @@
         android:text="Logout"
         android:layout_marginBottom="16dp" />
 
+    <!-- No Appointments Text -->
+    <TextView
+        android:id="@+id/no_appointments_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No appointments found."
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp" />
+
     <!-- List of Appointments -->
     <ListView
         android:id="@+id/appointment_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </LinearLayout>

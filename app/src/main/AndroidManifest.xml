@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -50,6 +53,26 @@
             android:exported="true">
             <!-- No intent filter since it's not the main entry point -->
         </activity>
+
+        <!-- Activity for Managing Availability -->
+        <activity
+            android:name=".PatientAppointmentsActivity"
+            android:exported="true">
+            <!-- No intent filter since it's not the main entry point -->
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService"
+            android:exported="false"
+            android:permission="TODO">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".ReminderBroadcastReceiver"
+            android:exported="true"
+            android:permission="TODO"
+            tools:ignore="ExportedReceiver" />
 
     </application>
 

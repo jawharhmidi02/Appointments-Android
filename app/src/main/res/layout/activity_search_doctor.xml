@@ -29,9 +29,20 @@
         android:text="Back"
         android:layout_marginBottom="16dp" />
 
+    <!-- No Doctors Text -->
+    <TextView
+        android:id="@+id/no_doctors_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No doctors found."
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp" />
+
     <!-- List of Doctors -->
     <ListView
         android:id="@+id/doctor_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </LinearLayout>

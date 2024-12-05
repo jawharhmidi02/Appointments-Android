@@ -45,6 +45,8 @@ dependencies {
     // Firebase UI for easy auth// Firebase Authentication
     implementation libs.firebase.auth.v2210
     implementation libs.firebase.ui.auth
+    implementation libs.firebase.messaging
+    implementation libs.core.ktx.v1101
 }
 
 apply plugin: 'com.google.gms.google-services'
